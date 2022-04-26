@@ -20,6 +20,12 @@ jobs:
 
     - name: Build
       run: go build -v ./...
+    
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v3.0.0
+      with:
+        name: release
+        
 
     - name: Test
       run: go test -v ./...
